@@ -1,0 +1,15 @@
+{
+  "name": "dod-cmmc-disclosure-tracker",
+  "version": "0.1.0",
+  "description": "Tracks the lifecycle of US defense + DoD + CMMC + ITAR + EAR + CUI regulatory disclosure obligations across 10 federal authorities — DoD CIO / Cyber AB / DIBCAC / DDTC / BIS / NIST / GSA / DCMA / DCSA / NARA-ISOO. Operator state-tracker, part of the DefenseTech 6-pack.",
+  "type": "module",
+  "main": "src/index.mjs",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "validate": "node src/validate.mjs"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/mizcausevic-dev/dod-cmmc-disclosure-tracker",
+  "repository": { "type": "git", "url": "git+https://github.com/mizcausevic-dev/dod-cmmc-disclosure-tracker.git" },
+  "keywords": ["defensetech", "dod", "cmmc", "dfars", "itar", "ear", "cui", "kinetic-gain-protocol-suite"]
+}

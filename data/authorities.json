@@ -1,0 +1,107 @@
+{
+  "$comment": "10 federal authorities relevant to defense-industry-base regulated AI / cybersecurity / export-control / CUI obligations. Seed dataset; verifiable against authority URLs.",
+  "schema_version": "0.1",
+  "as_of": "2026-05-30",
+  "authorities": [
+    {
+      "authority_id": "DOD-CIO",
+      "name": "Department of Defense, Office of the Chief Information Officer",
+      "scope": "DFARS cybersecurity clauses (252.204-7012, -7019, -7020, -7021), CDI safeguarding, cyber incident reporting policy",
+      "primary_url": "https://dodcio.defense.gov/",
+      "rulemaking_authority_basis": ["DFARS 252.204-7012", "10 USC 391"],
+      "primary_obligations": ["safeguard CDI", "report cyber incidents within 72 hours to dibnet.dod.mil"],
+      "ai_specific_position_as_of_seed": "Issued DoD Responsible AI Strategy + Implementation Pathway (2022) + CDAO oversight; expanding CMMC-adjacent AI governance under 2026 DFARS sweep.",
+      "enforcement_mode": "contract-clause-flowdown"
+    },
+    {
+      "authority_id": "CYBER-AB",
+      "name": "The Cyber AB (CMMC Accreditation Body)",
+      "scope": "CMMC ecosystem oversight — C3PAOs, RPOs, assessors, registered practitioners",
+      "primary_url": "https://cyberab.org/",
+      "rulemaking_authority_basis": ["CMMC 2.0 Program (32 CFR 170)"],
+      "primary_obligations": ["accredit C3PAOs that issue CMMC L2/L3 certifications", "maintain Code of Professional Conduct for assessors"],
+      "ai_specific_position_as_of_seed": "AI tools used in assessment evidence collection fall under same assessor confidentiality + integrity controls as human-generated evidence.",
+      "enforcement_mode": "ecosystem-accreditation"
+    },
+    {
+      "authority_id": "DIBCAC",
+      "name": "Defense Industrial Base Cybersecurity Assessment Center (DCMA)",
+      "scope": "Government-led CMMC L3 assessments, DoD-conducted NIST 800-171 medium/high confidence assessments",
+      "primary_url": "https://www.dcma.mil/DIBCAC/",
+      "rulemaking_authority_basis": ["DFARS 252.204-7020"],
+      "primary_obligations": ["conduct on-site/medium/high assessments", "submit summary scores to SPRS"],
+      "ai_specific_position_as_of_seed": "Assesses contractor self-reported scores in SPRS; growing focus on AI tools touching CUI during 2026 assessment cycles.",
+      "enforcement_mode": "government-direct-assessment"
+    },
+    {
+      "authority_id": "DDTC",
+      "name": "Directorate of Defense Trade Controls (State Department)",
+      "scope": "ITAR administration (22 CFR 120-130), US Munitions List, defense-services export licensing",
+      "primary_url": "https://www.pmddtc.state.gov/",
+      "rulemaking_authority_basis": ["Arms Export Control Act (22 USC 2778)", "22 CFR 120-130"],
+      "primary_obligations": ["DS-2032 manufacturer registration", "license export of USML items + technical data + defense services", "deemed-export licensing for foreign-person access"],
+      "ai_specific_position_as_of_seed": "Interim guidance treats AI-generated technical data on USML items as subject to ITAR; foreign-person AI access requires deemed-export authorization analysis.",
+      "enforcement_mode": "license-pre-authorization"
+    },
+    {
+      "authority_id": "BIS",
+      "name": "Bureau of Industry and Security (Commerce Department)",
+      "scope": "EAR administration (15 CFR 730-774), Commerce Control List, dual-use export controls",
+      "primary_url": "https://www.bis.doc.gov/",
+      "rulemaking_authority_basis": ["Export Control Reform Act of 2018 (50 USC 4801)", "15 CFR 730-774"],
+      "primary_obligations": ["license CCL-listed exports", "screen against Entity List + Denied Persons List + Unverified List", "deemed-export evaluation for foreign-person access"],
+      "ai_specific_position_as_of_seed": "October 2023 + 2024 controls on AI chips + frontier-model weights for certain destinations; ongoing rulemaking on cloud-AI compute (Section 4.2 of EO 14110 successor).",
+      "enforcement_mode": "license-pre-authorization-plus-screening"
+    },
+    {
+      "authority_id": "NIST",
+      "name": "National Institute of Standards and Technology",
+      "scope": "SP 800-171 (CUI protection), SP 800-172 (enhanced security), NIST AI RMF, NIST SP 800-218A (SSDF for AI)",
+      "primary_url": "https://www.nist.gov/itl/applied-cybersecurity",
+      "rulemaking_authority_basis": ["FISMA (44 USC 3553)", "FedRAMP authorities", "NDAA AI provisions"],
+      "primary_obligations": ["publish SP 800-171 + 172 control catalogs", "maintain AI RMF + Generative AI Profile", "host CUI Registry coordination with NARA-ISOO"],
+      "ai_specific_position_as_of_seed": "AI RMF + Generative AI Profile (NIST AI 600-1) widely cited in DFARS rulemaking + 7012 modernization; SP 800-218A defines secure development for AI systems.",
+      "enforcement_mode": "standards-incorporation-by-reference"
+    },
+    {
+      "authority_id": "GSA",
+      "name": "General Services Administration",
+      "scope": "FAR procurement policy (52.204-21 basic safeguarding), GSA Schedules + IT-70, FedRAMP joint authorization with DoD/DHS",
+      "primary_url": "https://www.gsa.gov/",
+      "rulemaking_authority_basis": ["FAR Council authority (41 USC 1303)"],
+      "primary_obligations": ["administer FAR clauses on prime contracts", "vet AI tools in GSA Multiple Award Schedule", "FedRAMP authorization pathway for AI services"],
+      "ai_specific_position_as_of_seed": "Generative AI specific procurement guidance published 2024; AI tools on GSA Schedule subject to enhanced disclosure + FedRAMP requirements at Moderate+.",
+      "enforcement_mode": "schedule-pre-vetting"
+    },
+    {
+      "authority_id": "DCMA",
+      "name": "Defense Contract Management Agency",
+      "scope": "Contract administration on DoD contracts; supplier risk + cybersecurity oversight downstream of DFARS",
+      "primary_url": "https://www.dcma.mil/",
+      "rulemaking_authority_basis": ["DFARS PGI 242"],
+      "primary_obligations": ["Contractor Purchasing System Review (CPSR)", "supplier surveillance", "DIBCAC parent organization (see DIBCAC)"],
+      "ai_specific_position_as_of_seed": "AI tools used in supplier risk analytics fall under same data-handling rules as supplier records (FOUO/CUI as applicable).",
+      "enforcement_mode": "contract-administration-oversight"
+    },
+    {
+      "authority_id": "DCSA",
+      "name": "Defense Counterintelligence and Security Agency",
+      "scope": "NISPOM administration (32 CFR 117), personnel security clearance investigations, facility clearances, FCL/SCIF oversight",
+      "primary_url": "https://www.dcsa.mil/",
+      "rulemaking_authority_basis": ["EO 12968", "EO 13526", "32 CFR 117 (NISPOM)"],
+      "primary_obligations": ["adjudicate clearances (NBIB→DCSA consolidation 2019)", "administer NISPOM at cleared facilities", "Continuous Vetting program"],
+      "ai_specific_position_as_of_seed": "AI tools at cleared facilities subject to NISPOM 8-100-series IT controls + IS-1 system security plan requirements; classified-environment AI use heavily restricted.",
+      "enforcement_mode": "facility-personnel-clearance"
+    },
+    {
+      "authority_id": "NARA-ISOO",
+      "name": "National Archives and Records Administration — Information Security Oversight Office",
+      "scope": "Executive Agent for Controlled Unclassified Information (CUI) program (32 CFR 2002); E.O. 13556 implementation",
+      "primary_url": "https://www.archives.gov/cui",
+      "rulemaking_authority_basis": ["E.O. 13556", "32 CFR 2002"],
+      "primary_obligations": ["maintain CUI Registry", "publish CUI Notices (e.g. 2020-04)", "oversee agency CUI implementation across federal government"],
+      "ai_specific_position_as_of_seed": "CUI Notice 2020-04 establishes baseline CUI handling; AI tools processing CUI must apply category-specific safeguarding from CUI Registry markings.",
+      "enforcement_mode": "registry-curation-plus-agency-oversight"
+    }
+  ]
+}
